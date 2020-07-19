@@ -70,6 +70,7 @@ This page is at route **`/pets/cat`**
 
   <br>
   <br>
+  <br>
 
 # How to...
 
@@ -153,4 +154,22 @@ Sometimes I was not able to get response from service url provided. See the scre
 
 So this does not happen while testing this application, I have added `people.json` file in the asset and sourcing it using HttpClient from location `/asset/data/people.json`
 
-I have added this path as part of environment. So when you use it in dev envornment, it will people.json file host on Angular server but if you build for production, it will use provided path `http://agl-developer-test.azurewebsites.net/people.json`
+> **Note:** I have added this path as part of environment. So when you use it in dev envornment, it will people.json file host on Angular server but if you build for production, it will use provided path `http://agl-developer-test.azurewebsites.net/people.json`
+
+```typescript
+// environment.ts
+
+export const environment = {
+  production: false,
+  apiUrl: "assets/data/people.json",
+};
+```
+
+```typescript
+// environment.prod.ts
+
+export const environment = {
+  production: true,
+  apiUrl: "http://agl-developer-test.azurewebsites.net/people.json",
+};
+```
