@@ -141,4 +141,16 @@ Sample end-to-end test results
 
 ![Sample End-to-End test result](./resources/sample-e2e-test-results.png)
 
----
+<br>
+<br>
+<br>
+
+# Issue
+
+Sometimes I was not able to get response from service url provided. See the screenshot attached.
+
+![Sample End-to-End test result](./resources/service-error.png)
+
+So this does not happen while testing this application, I have added `people.json` file in the asset and sourcing it using HttpClient from location `/asset/data/people.json`
+
+I have added this path as part of environment. So when you use it in dev envornment, it will people.json file host on Angular server but if you build for production, it will use provided path `http://agl-developer-test.azurewebsites.net/people.json`
