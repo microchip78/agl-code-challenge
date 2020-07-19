@@ -92,7 +92,7 @@ npm install @angular/cli -g
 
 ```bash
 # clone git repo
-git clone https://gitlab.kanchi.com.au/microchip78/agl-code-challenge.git
+git clone https://github.com/microchip78/agl-code-challenge.git
 
 # change directory
 cd agl-code-challenge
