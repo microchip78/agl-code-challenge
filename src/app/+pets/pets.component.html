@@ -1,0 +1,8 @@
+<ng-container *ngIf="pets$ | async as pets">
+  <app-pet-list [pets]="pets" ownerGender="Male" [pet]="petType"></app-pet-list>
+  <app-pet-list
+    [pets]="pets"
+    ownerGender="Female"
+    [pet]="petType"
+  ></app-pet-list>
+</ng-container>

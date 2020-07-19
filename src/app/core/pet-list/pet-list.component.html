@@ -1,0 +1,6 @@
+<ng-container *ngIf="pets | petsByOwnerGender: ownerGender:pet as filterPets">
+  <h5 class="title" *ngIf="filterPets.length > 0">{{ ownerGender }}</h5>
+  <ul>
+    <li *ngFor="let pet of filterPets">{{ pet.name }}</li>
+  </ul>
+</ng-container>
